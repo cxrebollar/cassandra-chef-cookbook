@@ -154,6 +154,11 @@ end
   end
 end
 
+authenticator = node['cassandra']['authenticator']
+
+puts "Your authenticator is #{authenticator}"
+
+
 %w(cassandra.yaml cassandra-env.sh).each do |f|
   template ::File.join(node['cassandra']['conf_dir'], f) do
     cookbook node['cassandra']['templates_cookbook']
