@@ -50,7 +50,7 @@ default['cassandra']['hinted_handoff_throttle_in_kb'] = 1024
 default['cassandra']['max_hints_delivery_threads'] = 2
 default['cassandra']['permissions_validity_in_ms'] = 2000
 
-default['cassandra']['authenticator'] = 'org.apache.cassandra.auth.AllowAllAuthenticator'
+default['cassandra']['authenticator'] = 'org.apache.cassandra.auth.PasswordAuthenticator'
 default['cassandra']['authorizer'] = 'org.apache.cassandra.auth.AllowAllAuthorizer'
 
 default['cassandra']['partitioner'] = 'org.apache.cassandra.dht.Murmur3Partitioner'
